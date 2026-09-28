@@ -1,23 +1,60 @@
 aid: bighaat
+
 name: Bighaat
-description: 'Bighaat is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Bighaat is the largest pan‑India digital marketplace for agricultural inputs, connecting farmers with a wide range of high‑quality seeds, fertilizers, pesticides, and equipment. Founded in 2015, the platform offers personalized technical guidance, data‑driven insights, and seamless logistics to improve sustainability and profitability for millions of farmers across India.'
+
 url: https://raw.githubusercontent.com/api-evangelist/bighaat/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
-- Company
-apis: []
+- Agriculture
+- Marketplace
+- India
+- AgriTech
+- B2B
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
-- type: Website
-  url: https://equityzen.com/company/bighaat
+
+  - type: Hosts
+    url: hosts/bighaat-hosts.yml
+  - type: Vendors
+    url: vendors/bighaat-vendors.yml
+  - type: DomainSecurity
+    url: security/bighaat-domain-security.yml
+  - type: Website
+    url: https://equityzen.com/company/bighaat
+
+apis: []
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: Bighaat’s public site provides only shopping pages and no API documentation or developer portal.
+  evidence:
+  - url: https://www.bighaat.com
+    status: 200
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: minimal
+  artifacts_added: 3
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
